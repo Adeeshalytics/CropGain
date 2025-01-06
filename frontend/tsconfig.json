@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve", // Enables the modern JSX runtime for React (React 17+)
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Includes modern JavaScript and browser DOM features
+    "allowJs": true, // Allows JavaScript files in the project
+    "skipLibCheck": true, // Skips type checking for declaration files
+    "strict": true, // Enables strict type checking options
+    "noEmit": true, // Prevents emitting output files
+    "esModuleInterop": true, // Allows ES module interoperability
+    "module": "ESNext", // Uses the latest ECMAScript module syntax
+    "moduleResolution": "Node", // Resolves modules using Node.js-style resolution
+    "resolveJsonModule": true, // Enables importing JSON files as modules
+    "isolatedModules": true, // Ensures each file can be safely transpiled in isolation
+    "incremental": true, // Speeds up subsequent builds by creating incremental builds
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ] // Creates a shorthand for importing from the src directory
+    },
+    "target": "ES2017" // Specifies ECMAScript target version for the emitted JavaScript
+    ,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts", // Next.js environment types
+    "**/*.ts", // Includes all TypeScript files
+    "**/*.tsx", // Includes all TSX files
+    ".next/types/**/*.ts" // Includes Next.js generated types
+  ],
+  "exclude": [
+    "node_modules" // Excludes node_modules directory
+  ]
+}
